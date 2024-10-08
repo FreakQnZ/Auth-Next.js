@@ -1,8 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Ready Made Authentication module built in [Next.js](https://nextjs.org/)
 
 ## Getting Started
+First, clone the project
 
-First, run the development server:
+```bash
+git clone https://github.com/FreakQnZ/Auth-Next.js.git
+```
+
+Next, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +21,22 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Speicifcations
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Authentication details
 
-## Learn More
+- [JWT-TOKEN] - Uses JWT to store and authenticate login information
+- [JWT-Expose-Protection] - Safeguarding from exposed JWT by storing token version after password change
+- [BCRYPT] - Uses bcrypt to hash the password before storing in database
+- [Login] - Uses Username and passwords for login with 2 forms of error handling, Wrong Password and User not existing
+- [Signup] - Uses email, username, password, and confirm password with normal REGEX checks and error handling for type of data
+- [Forgot-Password] - Forgot Password Input available with event empty to be filled by user according to specifications
+- [Database] - Uses Vercel Database (Postgres)
+- [Dependencies] - Tailwind CSS, DaisyUI, Bcrypt, Jsonwebtoken, Pg
 
-To learn more about Next.js, take a look at the following resources:
+.env Specifications
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+POSTGRES_URL="postgres:XXXXXXX"
+JWT_SECRET="XXXXXX"
+```
