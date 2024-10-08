@@ -25,7 +25,7 @@ const Navbar = () => {
         return (
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
-                    <Link href="/" className="btn btn-ghost text-xl">Split</Link>
+                    <Link href="/" className="btn btn-ghost text-xl">Auth</Link>
                 </div>
                 <div className="navbar-end">
                     <button className="btn">Loading...</button>
@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
-                <Link href="/" className="btn btn-ghost text-xl">Split</Link>
+                <Link href="/" className="btn btn-ghost text-xl">Auth</Link>
             </div>
             <div className="navbar-end">
                 {!isAuthenticated ? (
